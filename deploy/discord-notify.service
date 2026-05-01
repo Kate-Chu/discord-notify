@@ -1,0 +1,16 @@
+[Unit]
+Description=discord-notify gateway + sender
+After=network.target redis.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/discord-notify
+ExecStart=/home/ubuntu/discord-notify/.venv/bin/python start.py
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

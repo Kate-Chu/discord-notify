@@ -1,0 +1,5 @@
+# This file is for tooling config only (not for pip install)
+# To install server dependencies: pip install -r requirements.txt
+
+[tool.ruff]
+line-length = 100
